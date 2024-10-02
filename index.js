@@ -10,11 +10,7 @@ app.get("/", (req, res) => {
 
 // Define the task function
 const task = async () => {
-  const date = new Date();
-
-  const { data } = await axios.get("https://chathubserver-cgut.onrender.com");
-
-  console.log(`${data} at ${date}`);
+  await axios.get("https://chathubserver-cgut.onrender.com");
 };
 
 // Create the cron job, running every 20 minutes
