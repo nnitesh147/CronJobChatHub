@@ -13,10 +13,8 @@ const task = async () => {
   const { data } = await axios.get("https://chathubserver-cgut.onrender.com");
   console.log(new Date() + "     " + data);
 };
-
 // Create the cron job, running every 10 minutes
 const job = new CronJob("0 */5 * * * *", task);
-
 // Start the job
 //job.start();
 app.listen(3000, () => {
